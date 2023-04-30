@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33530.505
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Calcularor - config file", "Calcularor - config file.vcxproj", "{EAB5E266-E161-4D6B-8E81-8AB46D87686C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EAB5E266-E161-4D6B-8E81-8AB46D87686C}.Debug|x64.ActiveCfg = Release|x64
+		{EAB5E266-E161-4D6B-8E81-8AB46D87686C}.Debug|x64.Build.0 = Release|x64
+		{EAB5E266-E161-4D6B-8E81-8AB46D87686C}.Debug|x86.ActiveCfg = Debug|Win32
+		{EAB5E266-E161-4D6B-8E81-8AB46D87686C}.Debug|x86.Build.0 = Debug|Win32
+		{EAB5E266-E161-4D6B-8E81-8AB46D87686C}.Release|x64.ActiveCfg = Release|Win32
+		{EAB5E266-E161-4D6B-8E81-8AB46D87686C}.Release|x64.Build.0 = Release|Win32
+		{EAB5E266-E161-4D6B-8E81-8AB46D87686C}.Release|x86.ActiveCfg = Release|Win32
+		{EAB5E266-E161-4D6B-8E81-8AB46D87686C}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {75EA1280-34DD-4E76-9E13-B2711F3D490A}
+	EndGlobalSection
+EndGlobal

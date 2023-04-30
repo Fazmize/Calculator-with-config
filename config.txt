@@ -1,0 +1,4 @@
+additon function = false
+subtraction function = true
+multiplication function = true
+division function = true
