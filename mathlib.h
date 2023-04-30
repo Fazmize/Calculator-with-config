@@ -20,11 +20,7 @@ public:
 
 };
 
-/// <summary>
-/// Fuction for turning string operation into integer for switch
-/// </summary>
-/// <param name="operation"></param>
-/// <returns>integer</returns>
+//Function resposible for turning string operation into integer for switch
 int choice(std::string operation) {
 	if (operation == "add") return 1;
 	else if (operation == "sub") return 2;

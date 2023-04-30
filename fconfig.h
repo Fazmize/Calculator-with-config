@@ -18,9 +18,7 @@ void confgen() {
 		ConfigFile << "division function = true";
 	}
 
-
 	ConfigFile.close();
-
 }
 
 
@@ -37,6 +35,7 @@ int* confread() {
 		std::cout << "not existing\n";
 	}
 	else {
+		//Checks config for true and inputs value 1 or 0 into data array
 		while (std::getline(conf, fileText)) {
 			if (fileText.find("true") != std::string::npos) {
 				data[itr] = 1;
@@ -44,12 +43,11 @@ int* confread() {
 			}
 			else {
 				itr++;
-				std::cout << "loop";
 			}
 			
 		}
-		
 	}
+
 	conf.close();
 	return data;
 }
