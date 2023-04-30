@@ -28,7 +28,7 @@ int main()
     std::cout << "\n|-------SETTINGS-------|";
 
     while (programLoop) {
-        std::cout << "\n|-------Calculator-------|\n1.add\n2.sub\n3.mul\n4.div\n5.exit\n|-------Calculator-------|\n>";
+        std::cout << "\n|-------Calculator-------|\n1.add\n2.sub\n3.mul\n4.div\n5.exit\n6.gen config\n|-------Calculator-------|\n>";
         std::cin >> operation;
         if (operation == "exit") {
             exit(0);
@@ -81,6 +81,10 @@ int main()
                 break;
             }
             else {
+                if (number2 == 0) {
+                    std::cout << "Cannot divide by 0\n";
+                    main();
+                }
                 std::cout << "[div result: " << calc.div(number1, number2) << " ]";
                 break;
             }
