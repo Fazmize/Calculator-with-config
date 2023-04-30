@@ -1,0 +1,1 @@
+# Calcularor - config file
