@@ -47,7 +47,7 @@ int main()
         {
         case 1:
             if (add == false) {
-                std::cout << "access denied";
+                std::cout << "[access denied]";
                 break;
             }
             else {
@@ -57,7 +57,7 @@ int main()
 
         case 2:
             if (sub == false) {
-                std::cout << "access denied";
+                std::cout << "[access denied]";
                 break;
             }
             else {
@@ -67,7 +67,7 @@ int main()
 
         case 3:
             if (mul == false) {
-                std::cout << "access denied";
+                std::cout << "[access denied]";
                 break;
             }
             else {
@@ -77,7 +77,7 @@ int main()
 
         case 4:
             if (div == false) {
-                std::cout << "access denied";
+                std::cout << "[access denied]";
                 break;
             }
             else {
