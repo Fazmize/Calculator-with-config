@@ -12,7 +12,7 @@ void confgen() {
 		std::cout << "not created\n";
 	}
 	else {
-		ConfigFile << "additon function = true\n";
+		ConfigFile << "addition function = true\n";
 		ConfigFile << "subtraction function = true\n";
 		ConfigFile << "multiplication function = true\n";
 		ConfigFile << "division function = true";
@@ -28,6 +28,7 @@ int* confread() {
 	std::fstream conf;
 	std::string fileText;
 	static int data[4];
+	std::string line[4];
 	int itr = 0;
 
 	conf.open("config.txt", std::ios::in);
@@ -37,15 +38,16 @@ int* confread() {
 	else {
 		//Checks config for true and inputs value 1 or 0 into data array
 		while (std::getline(conf, fileText)) {
-			if (fileText.find("true") != std::string::npos) {
-				data[itr] = 1;
-				itr++;
-			}
-			else {
-				itr++;
-			}
-			
+			line[itr] = fileText;
+
+			itr++;
+
 		}
+		data[0] = (line[0] == "addition function = true") ? 1 : 0;
+		data[1] = (line[1] == "subtraction function = true") ? 1 : 0;
+		data[2] = (line[2] == "multiplication function = true") ? 1 : 0;
+		data[3] = (line[3] == "division function = true") ? 1 : 0;
+
 	}
 
 	conf.close();
