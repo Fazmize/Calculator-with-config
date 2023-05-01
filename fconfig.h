@@ -36,6 +36,7 @@ int* confread() {
 		std::cout << "not existing\n";
 	}
 	else {
+
 		//Checks config for true and inputs value 1 or 0 into data array
 		while (std::getline(conf, fileText)) {
 			line[itr] = fileText;
@@ -53,3 +54,13 @@ int* confread() {
 	conf.close();
 	return data;
 }
+
+class sPtr {
+	int* ptr;
+public:
+	explicit sPtr(int* p = NULL) { ptr = p; }
+
+	~sPtr() { delete (ptr); }
+
+	int& operator*() { return *ptr; }
+};

@@ -12,14 +12,17 @@ int main()
     double number2 = 0.0;
     Mathlib calc;
     bool programLoop = true;
+    
 
     //Pointer and boolean variables for getting an array from a function
-    int* ptr = confread();
+    int* ptr = new int[4];
+    ptr = confread();
     bool add = (ptr[0] == 1) ? true : false;
     bool sub = (ptr[1] == 1) ? true : false;
     bool mul = (ptr[2] == 1) ? true : false;
     bool div = (ptr[3] == 1) ? true : false;
-    
+    ptr = nullptr;
+    delete[](ptr);
 
     std::cout << std::boolalpha << "|-------SETTINGS-------|";
     std::cout << std::boolalpha << "\nadd = " << add;
@@ -27,6 +30,7 @@ int main()
     std::cout << std::boolalpha << "\nmul = " << mul;
     std::cout << std::boolalpha << "\ndiv = " << div;
     std::cout << "\n|-------SETTINGS-------|";
+   
 
     while (programLoop) {
         std::cout << "\n|-------Calculator-------|\n1.add\n2.sub\n3.mul\n4.div\n5.exit\n6.gen config\n|-------Calculator-------|\n>";
