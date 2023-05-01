@@ -54,13 +54,3 @@ int* confread() {
 	conf.close();
 	return data;
 }
-
-class sPtr {
-	int* ptr;
-public:
-	explicit sPtr(int* p = NULL) { ptr = p; }
-
-	~sPtr() { delete (ptr); }
-
-	int& operator*() { return *ptr; }
-};
