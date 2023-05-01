@@ -19,6 +19,7 @@ int main()
     bool sub = (ptr[1] == 1) ? true : false;
     bool mul = (ptr[2] == 1) ? true : false;
     bool div = (ptr[3] == 1) ? true : false;
+    
 
     std::cout << std::boolalpha << "|-------SETTINGS-------|";
     std::cout << std::boolalpha << "\nadd = " << add;
@@ -35,6 +36,7 @@ int main()
         }
         else if (operation == "gen") {
             confgen();
+            system("cls");
             main();
         }
         std::cin >> number1;
