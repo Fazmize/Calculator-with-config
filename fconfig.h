@@ -40,9 +40,7 @@ int* confread() {
 		//Checks config for true and inputs value 1 or 0 into data array
 		while (std::getline(conf, fileText)) {
 			line[itr] = fileText;
-
 			itr++;
-
 		}
 		data[0] = (line[0] == "addition function = true") ? 1 : 0;
 		data[1] = (line[1] == "subtraction function = true") ? 1 : 0;

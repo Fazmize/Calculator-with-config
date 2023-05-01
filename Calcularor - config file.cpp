@@ -24,6 +24,7 @@ int main()
     ptr = nullptr;
     delete[](ptr);
 
+
     std::cout << std::boolalpha << "|-------SETTINGS-------|";
     std::cout << std::boolalpha << "\nadd = " << add;
     std::cout << std::boolalpha << "\nsub = " << sub;
@@ -33,7 +34,14 @@ int main()
    
 
     while (programLoop) {
-        std::cout << "\n|-------Calculator-------|\n1.add\n2.sub\n3.mul\n4.div\n5.exit\n6.gen config\n|-------Calculator-------|\n>";
+        std::cout << "\n|-------Calculator-------|\n";
+        std::cout << "1.add\n";
+        std::cout << "2.sub\n";
+        std::cout << "3.mul\n";
+        std::cout << "4.div\n";
+        std::cout << "5.exit\n";
+        std::cout << "6.gen config\n";
+        std::cout << "|-------Calculator-------| \n>";
         std::cin >> operation;
         if (operation == "exit") {
             exit(0);
