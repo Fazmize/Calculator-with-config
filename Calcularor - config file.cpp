@@ -13,18 +13,14 @@ int main()
     Mathlib calc;
     bool programLoop = true;
     
-
-    //Pointer and boolean variables for getting an array from a function
-    int* ptr = new int[4];
-    ptr = confread();
+    int ptr[4];
+    confread(ptr);
     bool add = (ptr[0] == 1) ? true : false;
     bool sub = (ptr[1] == 1) ? true : false;
     bool mul = (ptr[2] == 1) ? true : false;
     bool div = (ptr[3] == 1) ? true : false;
-    ptr = nullptr;
-    delete[](ptr);
-
-
+    
+    system("cls");
     std::cout << std::boolalpha << "|-------SETTINGS-------|";
     std::cout << std::boolalpha << "\nadd = " << add;
     std::cout << std::boolalpha << "\nsub = " << sub;
@@ -41,14 +37,18 @@ int main()
         std::cout << "4.div\n";
         std::cout << "5.exit\n";
         std::cout << "6.gen config\n";
+        std::cout << "7.update access\n";
         std::cout << "|-------Calculator-------| \n>";
         std::cin >> operation;
         if (operation == "exit") {
             exit(0);
         }
-        else if (operation == "gen") {
+        if (operation == "gen") {
             confgen();
             system("cls");
+            main();
+        }
+        if (operation == "update") {
             main();
         }
         std::cin >> number1;
@@ -96,14 +96,15 @@ int main()
             }
             else {
                 if (number2 == 0) {
-                    std::cout << "Cannot divide by 0\n";
-                    main();
+                    std::cout << "[Cannot divide by 0]";
+                    break;
                 }
                 std::cout << "[div result: " << calc.div(number1, number2) << " ]";
                 break;
             }
 
         default:
+            std::cout << "[Not a valid operation]";
             break;
         }
 

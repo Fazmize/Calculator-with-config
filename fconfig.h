@@ -3,7 +3,7 @@
 #include <string>
 
 
-//This function generates config file
+//This function generates config file with default true values
 void confgen() {
 	std::fstream ConfigFile;
 	ConfigFile.open("config.txt", std::ios::out);
@@ -22,8 +22,8 @@ void confgen() {
 }
 
 
-//This function is responsible for reading and passing the array to main
-int* confread() {
+//This function is responsible for reading the config and updating values ptr array in main
+void confread(int ptr[]) {
 
 	std::fstream conf;
 	std::string fileText;
@@ -37,18 +37,17 @@ int* confread() {
 	}
 	else {
 
-		//Checks config for true and inputs value 1 or 0 into data array
+		//Checks config for true and inputs value 1 or 0 into ptr array
 		while (std::getline(conf, fileText)) {
 			line[itr] = fileText;
 			itr++;
 		}
-		data[0] = (line[0] == "addition function = true") ? 1 : 0;
-		data[1] = (line[1] == "subtraction function = true") ? 1 : 0;
-		data[2] = (line[2] == "multiplication function = true") ? 1 : 0;
-		data[3] = (line[3] == "division function = true") ? 1 : 0;
+		ptr[0] = (line[0] == "addition function = true") ? 1 : 0;
+		ptr[1] = (line[1] == "subtraction function = true") ? 1 : 0;
+		ptr[2] = (line[2] == "multiplication function = true") ? 1 : 0;
+		ptr[3] = (line[3] == "division function = true") ? 1 : 0;
 
 	}
 
 	conf.close();
-	return data;
 }
