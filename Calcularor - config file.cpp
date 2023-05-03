@@ -37,6 +37,7 @@ int main()
         std::cout << "4.div\n";
         std::cout << "5.exit\n";
         std::cout << "6.gen config\n";
+        std::cout << "7.update access\n";
         std::cout << "|-------Calculator-------| \n>";
         std::cin >> operation;
         if (operation == "exit") {
@@ -95,14 +96,15 @@ int main()
             }
             else {
                 if (number2 == 0) {
-                    std::cout << "Cannot divide by 0\n";
-                    main();
+                    std::cout << "[Cannot divide by 0]";
+                    break;
                 }
                 std::cout << "[div result: " << calc.div(number1, number2) << " ]";
                 break;
             }
 
         default:
+            std::cout << "[Not a valid operation]";
             break;
         }
 
