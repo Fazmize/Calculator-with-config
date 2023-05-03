@@ -23,7 +23,7 @@ void confgen() {
 
 
 //This function is responsible for reading and passing the array to main
-int* confread() {
+void confread(int ptr[]) {
 
 	std::fstream conf;
 	std::string fileText;
@@ -42,13 +42,13 @@ int* confread() {
 			line[itr] = fileText;
 			itr++;
 		}
-		data[0] = (line[0] == "addition function = true") ? 1 : 0;
-		data[1] = (line[1] == "subtraction function = true") ? 1 : 0;
-		data[2] = (line[2] == "multiplication function = true") ? 1 : 0;
-		data[3] = (line[3] == "division function = true") ? 1 : 0;
+		ptr[0] = (line[0] == "addition function = true") ? 1 : 0;
+		ptr[1] = (line[1] == "subtraction function = true") ? 1 : 0;
+		ptr[2] = (line[2] == "multiplication function = true") ? 1 : 0;
+		ptr[3] = (line[3] == "division function = true") ? 1 : 0;
 
 	}
 
 	conf.close();
-	return data;
+	//return data;
 }

@@ -13,18 +13,14 @@ int main()
     Mathlib calc;
     bool programLoop = true;
     
-
-    //Pointer and boolean variables for getting an array from a function
-    int* ptr = new int[4];
-    ptr = confread();
+    int ptr[4];
+    confread(ptr);
     bool add = (ptr[0] == 1) ? true : false;
     bool sub = (ptr[1] == 1) ? true : false;
     bool mul = (ptr[2] == 1) ? true : false;
     bool div = (ptr[3] == 1) ? true : false;
-    ptr = nullptr;
-    delete[](ptr);
-
-
+    
+    system("cls");
     std::cout << std::boolalpha << "|-------SETTINGS-------|";
     std::cout << std::boolalpha << "\nadd = " << add;
     std::cout << std::boolalpha << "\nsub = " << sub;
@@ -46,9 +42,12 @@ int main()
         if (operation == "exit") {
             exit(0);
         }
-        else if (operation == "gen") {
+        if (operation == "gen") {
             confgen();
             system("cls");
+            main();
+        }
+        if (operation == "update") {
             main();
         }
         std::cin >> number1;
